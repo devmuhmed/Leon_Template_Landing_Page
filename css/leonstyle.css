@@ -2,6 +2,10 @@
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --paragraph-lineheight:1.8;
+    --paragraph-color:#777;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -62,7 +66,7 @@ body {
         font-size: 60px;
     }
     .special-heading + p {
-        margin: -20px;
+        margin-top: -20px;
     }
 }
 /* End Components */
@@ -169,14 +173,14 @@ body {
 }
 .landing .intro-text p{
     font-size: 19px;
-    line-height: 1.8;
+    line-height: var(--paragraph-lineheight);
 }
 /* End Landing section */
 /* Start Features */
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
 }
 .features .container {
     display:grid;
@@ -195,15 +199,15 @@ body {
     margin: 30px 0;
 }
 .features .feat p {
-    line-height: 1.8;
-    color: #777;
+    line-height: var(--paragraph-lineheight);
+    color: var(--paragraph-color);
     font-size: 17px;
 }
 /* End Features */
 /* Start Services */
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 .services .services-content {
     display: grid;
@@ -234,7 +238,7 @@ body {
 .services .services-content .srv .text p {
     color: #444;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: var(--paragraph-lineheight);
 }
 .services .services-content .image {
     text-align: center;
@@ -260,3 +264,34 @@ body {
     }
 }
 /* End Services */
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+.portfolio .portfolio-content .card {
+    background-color: white;
+}
+.portfolio .portfolio-content .card img {
+    width: 100%;
+}
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3 {
+    margin: 0;
+}
+.portfolio .portfolio-content .card .info p {
+    color: var(--paragraph-color);
+    list-style:none;
+    line-height: var(--paragraph-lineheight);
+    margin-bottom: 0;
+}
+/* End Portfolio */
